@@ -190,6 +190,36 @@ report_capability(struct capability_info *cap, uint8_t len, uint32_t lo,
 	}
 }
 
+
+/* Check if Secondary Processor-Based VM-Execution Controls are available:
+ *
+ * Read the Primary IA32_VMX_PROCBASED_CTLS
+ * To determine this, we check if bit 63 is set, if yes, then Secondary Processor-Based VM-Execution Controls are available else not.
+ */
+void
+check_secondary_procbased_availability(void)
+{
+	uint32_t lo, hi;
+
+	/* Primary Processor-Based VM-Execution Controls  */
+	rdmsr(IA32_VMX_PROCBASED_CTLS, lo, hi);
+
+	if ( hi & (1 << (63 - 32)))
+	{
+		printk("Secondary Processor-Based VM-Execution Controls are available");
+			/* Secondary Processor-Based VM-Execution Controls*/
+			rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
+			pr_info("Secondary Processor-Based Controls MSR: 0x%llx\n",
+				(uint64_t)(lo | (uint64_t)hi << 32));
+			report_capability(secondary_proc_based, 23, lo, hi);
+	}
+	else
+	{
+		printk("Secondary Processor-Based VM-Execution Controls are NOT available!");
+	}
+}
+
+
 /*
  * detect_vmx_features
  *
@@ -213,10 +243,8 @@ detect_vmx_features(void)
 	report_capability(primary_proc_based, 22, lo, hi);
 
 	/* Secondary Processor-Based VM-Execution Controls */
-	rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
-        pr_info("Secondary Processor-Based Controls MSR: 0x%llx\n",
-        (uint64_t)(lo | (uint64_t)hi << 32));
-        report_capability(secondary_proc_based, 27, lo, hi);
+	check_secondary_procbased_availability();
+	 
 
 	/* VM-Exit Control Fields */
 	rdmsr(IA32_VMX_EXIT_CTLS, lo, hi);
