@@ -51,19 +51,20 @@ To install ncurses: sudo apt-get install libncurses5-dev libncursesw5-dev
 
 Output:
 
-https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/first.png
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/first.png?raw=true)
+ 
 
 Pinbased Controls MSR & Primary Proc-Based Controls MSR:
 
-https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/second.png
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/second.png?raw=true)
 
 
 Secondary Proc-Based Controls MSR & Exit Controls MSR:
 
-https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/third.png
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/third.png?raw=true)
 
 Entry Controls MSR:
 
-https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/fourth.png
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/fourth.png?raw=true)
 
 Complete Output: https://github.com/simran-memon/linux/blob/master/assignment%231_screenshots/Output.txt
