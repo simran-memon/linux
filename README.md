@@ -43,11 +43,14 @@ INSTALLATION:
 To install make: sudo apt install make
 
 To install gcc: sudo apt update
-                sudo apt install build-essential
-                sudo apt-get install manpages-dev
-                gcc –version
+                
+		sudo apt install build-essential
+                
+		sudo apt-get install manpages-dev
+                
+		gcc –version
 
-To install ncurses: sudo apt-get install libncurses5-dev libncursesw5-dev
+To install ncurses:     sudo apt-get install libncurses5-dev libncursesw5-dev
 
 Output:
 
