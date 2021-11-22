@@ -61,7 +61,8 @@ Step_3: Install KVM-QEMU (hypervisor) on the host VM with the help of following 
         -> Now install the Ubuntu OS as a nested VM through the Virt Manager and perform a reboot.
         -> You will now be able to login into the inner VM.
         
-        ![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/VM-into-VM.png?raw=true)
+	
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/VM-into-VM.png?raw=true)
         
         
 Step_4: Testing the output for first two leaf nodes on the inner VM now
@@ -71,17 +72,18 @@ Step_4: Testing the output for first two leaf nodes on the inner VM now
            
            output:
  
-        ![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_F.png?raw=true)
+        
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_F.png?raw=true)
         
         -> To check for leaf node 0x4FFFFFFE, execute in inner VM: cpuid -l 0x4FFFFFFE
      
           output:
-                  
-        ![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_E.png?raw=true)
+     
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_E.png?raw=true)
         
         
         
-=============================================================================================================================
+==================================================================================================================================================================
 
 
 
@@ -142,14 +144,14 @@ Step_3: Testing the output for last two leaf nodes on the inner VM now
         -> To check for leaf node 0x4FFFFFFD execute in inner VM: cpuid -l 0x4FFFFFFD -s 0
 	   
 	   output:
-           
-        ![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_D.png?raw=true)
+	   
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_D.png?raw=true)
         
         -> To check for leaf node 0x4FFFFFFC, execute in inner VM: cpuid -l 0x4FFFFFFC -s 0
         
            output:           
                              
-            ![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_C.png?raw=true)
+![alt text](https://github.com/simran-memon/linux/blob/master/assignment_2_3_screenshots/LEAF_NODE_C.png?raw=true)
         
 Question_3: Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there 
 more exits performed during certain VM operations? Approximately how many exits does a full VM 
