@@ -1,0 +1,22 @@
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ pwd
+/home/simranubuntu2
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ sudo apt install cpuid
+[sudo] password for simranubuntu2: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  cpuid
+0 upgraded, 1 newly installed, 0 to remove and 124 not upgraded.
+Need to get 86.0 kB of archives.
+After this operation, 369 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 cpuid amd64 20200211-1 [86.0 kB]
+Fetched 86.0 kB in 0s (178 kB/s) 
+Selecting previously unselected package cpuid.
+(Reading database ... 161773 files and directories currently installed.)
+Preparing to unpack .../cpuid_20200211-1_amd64.deb ...
+Unpacking cpuid (20200211-1) ...
+Setting up cpuid (20200211-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ 
+

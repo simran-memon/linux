@@ -1,0 +1,202 @@
+
+step_1: cpuid -l 0x4FFFFFFF
+
+
+output:
+
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ cpuid -l 0x4FFFFFFF
+CPU 0:
+   0x4fffffff 0x00: eax=0x00142c26 ebx=0xc09fbc2e ecx=0x00000000 edx=0x78df7405
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ 
+
+
+step_2: cpuid -l 0x4FFFFFFE
+
+output:
+
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ cpuid -l 0x4FFFFFFE
+CPU 0:
+   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000009 ecx=0xf1dc1242 edx=0xd4e70882
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ 
+
+
+step_3: cpuid -l 0x4FFFFFFD -s 0
+
+output:
+
+inner vm:
+
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ cpuid -l 0x4FFFFFFD -s 0
+CPU 0:
+   0x4ffffffd 0x00: eax=0x00002293 ebx=0x00000000 ecx=0x00000000 edx=0x00000000
+
+
+outer vm:  
+
+dmesg:
+[   68.018534] virbr0: topology change detected, propagating
+[  559.687572] For Leaf Node: 0x4FFFFFFD returning following exit information
+[  559.687576] The Exit number 0 was processed 8851 times
+[  559.687578] The Exit number 1 was processed 28551 times
+[  559.687578] The Exit number 2 was processed 0 times
+[  559.687579] The Exit number 3 was processed 0 times
+[  559.687580] The Exit number 4 was processed 0 times
+[  559.687581] The Exit number 5 was processed 0 times
+[  559.687581] The Exit number 6 was processed 0 times
+[  559.687582] The Exit number 7 was processed 4729 times
+[  559.687583] The Exit number 8 was processed 0 times
+[  559.687584] The Exit number 9 was processed 0 times
+[  559.687584] The Exit number 10 was processed 142549 times
+[  559.687585] The Exit number 11 was processed 0 times
+[  559.687586] The Exit number 12 was processed 17150 times
+[  559.687586] The Exit number 13 was processed 0 times
+[  559.687587] The Exit number 14 was processed 0 times
+[  559.687588] The Exit number 15 was processed 0 times
+[  559.687588] The Exit number 16 was processed 0 times
+[  559.687589] The Exit number 17 was processed 0 times
+[  559.687590] The Exit number 18 was processed 0 times
+[  559.687590] The Exit number 19 was processed 0 times
+[  559.687591] The Exit number 20 was processed 0 times
+[  559.687592] The Exit number 21 was processed 0 times
+[  559.687592] The Exit number 22 was processed 0 times
+[  559.687593] The Exit number 23 was processed 0 times
+[  559.687593] The Exit number 24 was processed 0 times
+[  559.687594] The Exit number 25 was processed 0 times
+[  559.687595] The Exit number 26 was processed 0 times
+[  559.687595] The Exit number 27 was processed 0 times
+[  559.687596] The Exit number 28 was processed 19761 times
+[  559.687597] The Exit number 29 was processed 1 times
+[  559.687597] The Exit number 30 was processed 150912 times
+[  559.687598] The Exit number 31 was processed 932 times
+[  559.687599] The Exit number 32 was processed 53870 times
+[  559.687599] The Exit number 33 was processed 0 times
+[  559.687600] The Exit number 34 was processed 0 times
+[  559.687601] The Exit number 35 was processed 0 times
+[  559.687602] The Exit number 36 was processed 0 times
+[  559.687602] The Exit number 37 was processed 0 times
+[  559.687603] The Exit number 38 was processed 0 times
+[  559.687603] The Exit number 39 was processed 0 times
+[  559.687604] The Exit number 40 was processed 62 times
+[  559.687605] The Exit number 41 was processed 0 times
+[  559.687605] The Exit number 42 was processed 0 times
+[  559.687606] The Exit number 43 was processed 0 times
+[  559.687607] The Exit number 44 was processed 0 times
+[  559.687607] The Exit number 45 was processed 0 times
+[  559.687608] The Exit number 46 was processed 0 times
+[  559.687608] The Exit number 47 was processed 0 times
+[  559.687609] The Exit number 48 was processed 685893 times
+[  559.687610] The Exit number 49 was processed 31837 times
+[  559.687610] The Exit number 50 was processed 0 times
+[  559.687611] The Exit number 51 was processed 0 times
+[  559.687611] The Exit number 52 was processed 0 times
+[  559.687612] The Exit number 53 was processed 0 times
+[  559.687612] The Exit number 54 was processed 2 times
+[  559.687613] The Exit number 55 was processed 2 times
+[  559.687614] The Exit number 56 was processed 0 times
+[  559.687614] The Exit number 57 was processed 0 times
+[  559.687615] The Exit number 58 was processed 0 times
+[  559.687615] The Exit number 59 was processed 0 times
+[  559.687616] The Exit number 60 was processed 0 times
+[  559.687617] The Exit number 61 was processed 0 times
+[  559.687617] The Exit number 62 was processed 0 times
+[  559.687618] The Exit number 63 was processed 0 times
+[  559.687619] The Exit number 64 was processed 0 times
+[  559.687619] The Exit number 65 was processed 0 times
+[  559.687620] The Exit number 66 was processed 0 times
+[  559.687620] The Exit number 67 was processed 0 times
+[  559.687621] The Exit number 68 was processed 0 times
+[  559.687622] The Exit number 69 was processed 0 times
+simran@simran-virtual-machine:~/linux$ 
+
+
+
+step_4: cpuid -l 0x4FFFFFFC -s 0
+
+output:
+
+inner vm:
+simranubuntu2@simranubuntu2-Standard-PC-Q35-ICH9-2009:~$ cpuid -l 0x4FFFFFFC -s 0
+CPU 0:
+   0x4ffffffc 0x00: eax=0x4ffffffc ebx=0x00000000 ecx=0x72db3850 edx=0x00000000
+
+
+outer vm:
+
+[  922.184286] The Exit number 68 was processed 0 times
+[  922.184287] The Exit number 69 was processed 0 times
+[  976.777077] For Leaf Node: 0x4FFFFFFC returning following exit information
+[  976.777082] For Exit number 0 , total 1926969424 CPU cycles spent processing it
+[  976.777083] For Exit number 1 , total 6824229 CPU cycles spent processing it
+[  976.777084] For Exit number 2 , total 0 CPU cycles spent processing it
+[  976.777084] For Exit number 3 , total 0 CPU cycles spent processing it
+[  976.777085] For Exit number 4 , total 0 CPU cycles spent processing it
+[  976.777085] For Exit number 5 , total 0 CPU cycles spent processing it
+[  976.777086] For Exit number 6 , total 0 CPU cycles spent processing it
+[  976.777086] For Exit number 7 , total 35810719 CPU cycles spent processing it
+[  976.777087] For Exit number 8 , total 0 CPU cycles spent processing it
+[  976.777087] For Exit number 9 , total 0 CPU cycles spent processing it
+[  976.777088] For Exit number 10 , total 1656930742 CPU cycles spent processing it
+[  976.777088] For Exit number 11 , total 0 CPU cycles spent processing it
+[  976.777089] For Exit number 12 , total 1210778628 CPU cycles spent processing it
+[  976.777090] For Exit number 13 , total 0 CPU cycles spent processing it
+[  976.777090] For Exit number 14 , total 0 CPU cycles spent processing it
+[  976.777090] For Exit number 15 , total 0 CPU cycles spent processing it
+[  976.777091] For Exit number 16 , total 0 CPU cycles spent processing it
+[  976.777091] For Exit number 17 , total 0 CPU cycles spent processing it
+[  976.777092] For Exit number 18 , total 0 CPU cycles spent processing it
+[  976.777092] For Exit number 19 , total 0 CPU cycles spent processing it
+[  976.777093] For Exit number 20 , total 0 CPU cycles spent processing it
+[  976.777093] For Exit number 21 , total 0 CPU cycles spent processing it
+[  976.777094] For Exit number 22 , total 0 CPU cycles spent processing it
+[  976.777094] For Exit number 23 , total 0 CPU cycles spent processing it
+[  976.777095] For Exit number 24 , total 0 CPU cycles spent processing it
+[  976.777095] For Exit number 25 , total 0 CPU cycles spent processing it
+[  976.777095] For Exit number 26 , total 0 CPU cycles spent processing it
+[  976.777096] For Exit number 27 , total 0 CPU cycles spent processing it
+[  976.777096] For Exit number 28 , total 493463460 CPU cycles spent processing it
+[  976.777097] For Exit number 29 , total 29905 CPU cycles spent processing it
+[  976.777098] For Exit number 30 , total 1777922770 CPU cycles spent processing it
+[  976.777098] For Exit number 31 , total 47435521 CPU cycles spent processing it
+[  976.777099] For Exit number 32 , total 3883302433 CPU cycles spent processing it
+[  976.777099] For Exit number 33 , total 0 CPU cycles spent processing it
+[  976.777100] For Exit number 34 , total 0 CPU cycles spent processing it
+[  976.777100] For Exit number 35 , total 0 CPU cycles spent processing it
+[  976.777101] For Exit number 36 , total 0 CPU cycles spent processing it
+[  976.777101] For Exit number 37 , total 0 CPU cycles spent processing it
+[  976.777101] For Exit number 38 , total 0 CPU cycles spent processing it
+[  976.777102] For Exit number 39 , total 0 CPU cycles spent processing it
+[  976.777102] For Exit number 40 , total 841130 CPU cycles spent processing it
+[  976.777103] For Exit number 41 , total 0 CPU cycles spent processing it
+[  976.777103] For Exit number 42 , total 0 CPU cycles spent processing it
+[  976.777104] For Exit number 43 , total 0 CPU cycles spent processing it
+[  976.777104] For Exit number 44 , total 0 CPU cycles spent processing it
+[  976.777105] For Exit number 45 , total 0 CPU cycles spent processing it
+[  976.777105] For Exit number 46 , total 0 CPU cycles spent processing it
+[  976.777106] For Exit number 47 , total 0 CPU cycles spent processing it
+[  976.777106] For Exit number 48 , total 25212051631 CPU cycles spent processing it
+[  976.777107] For Exit number 49 , total 1950680069 CPU cycles spent processing it
+[  976.777107] For Exit number 50 , total 0 CPU cycles spent processing it
+[  976.777108] For Exit number 51 , total 0 CPU cycles spent processing it
+[  976.777108] For Exit number 52 , total 0 CPU cycles spent processing it
+[  976.777109] For Exit number 53 , total 0 CPU cycles spent processing it
+[  976.777109] For Exit number 54 , total 22953 CPU cycles spent processing it
+[  976.777110] For Exit number 55 , total 60290 CPU cycles spent processing it
+[  976.777110] For Exit number 56 , total 0 CPU cycles spent processing it
+[  976.777111] For Exit number 57 , total 0 CPU cycles spent processing it
+[  976.777111] For Exit number 58 , total 0 CPU cycles spent processing it
+[  976.777112] For Exit number 59 , total 0 CPU cycles spent processing it
+[  976.777112] For Exit number 60 , total 0 CPU cycles spent processing it
+[  976.777113] For Exit number 61 , total 0 CPU cycles spent processing it
+[  976.777113] For Exit number 62 , total 0 CPU cycles spent processing it
+[  976.777113] For Exit number 63 , total 0 CPU cycles spent processing it
+[  976.777114] For Exit number 64 , total 0 CPU cycles spent processing it
+[  976.777114] For Exit number 65 , total 0 CPU cycles spent processing it
+[  976.777115] For Exit number 66 , total 0 CPU cycles spent processing it
+[  976.777115] For Exit number 67 , total 0 CPU cycles spent processing it
+[  976.777116] For Exit number 68 , total 0 CPU cycles spent processing it
+[  976.777116] For Exit number 69 , total 0 CPU cycles spent processing it
+simran@simran-virtual-machine:~/linux$ 
+
+
+
+
