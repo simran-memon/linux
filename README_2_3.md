@@ -15,13 +15,15 @@ when special CPUID leaf nodes are requested.
 Question_1: For each member in your team, provide 1 paragraph detailing what parts of the lab that member 
 implemented / researched.	
 
-=> Simran: Researched about exits reasons NOT enabled/handled in SDM
+=> Simran - SJSU_ID: 015950610
+           Researched about exits reasons NOT enabled/handled in SDM
            Installing KVM QEMU and Ubuntu OS as a Nested VM
            Build the linux kernel
            Modified code in cpuid.c
            Testing the setup by a test program
             
-=> Limeka: Researched about exits reasons NOT enabled/handled in KVM
+=> Limeka  - SJSU_ID: 
+           Researched about exits reasons NOT enabled/handled in KVM
            Researched and implemented atomic variables
            Build the linux kernel
            Modified code in vmx.c
@@ -107,13 +109,15 @@ when special CPUID leaf nodes are requested.
 Question_1: For each member in your team, provide 1 paragraph detailing what parts of the lab that member 
 implemented / researched.	
 
-=> Simran: Researched about exits reasons NOT enabled/handled in SDM
+=> Simran  - SJSU_ID: 015950610
+           Researched about exits reasons NOT enabled/handled in SDM
            Checking growth rate of exit types
            Build the linux kernel
            Modified code in cpuid.c
            Testing code changes
             
-=> Limeka: Researched about exits reasons NOT enabled/handled in KVM
+=> Limeka  - SJSU_ID:
+           Researched about exits reasons NOT enabled/handled in KVM
            Checking total exits after nested VM reboot
            Build the linux kernel
            Modified code in vmx.c
