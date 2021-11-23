@@ -22,7 +22,7 @@ implemented / researched.
            Modified code in cpuid.c
            Testing the setup by a test program
             
-=> Limeka  - SJSU_ID: 
+=> Limeka  - SJSU_ID: 015905812
            Researched about exits reasons NOT enabled/handled in KVM
            Researched and implemented atomic variables
            Build the linux kernel
@@ -116,7 +116,7 @@ implemented / researched.
            Modified code in cpuid.c
            Testing code changes
             
-=> Limeka  - SJSU_ID:
+=> Limeka  - SJSU_ID: 015905812
            Researched about exits reasons NOT enabled/handled in KVM
            Checking total exits after nested VM reboot
            Build the linux kernel
