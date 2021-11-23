@@ -16,18 +16,30 @@ Question_1: For each member in your team, provide 1 paragraph detailing what par
 implemented / researched.	
 
 => Simran - SJSU_ID: 015950610
+
            Researched about exits reasons NOT enabled/handled in SDM
-           Installing KVM QEMU and Ubuntu OS as a Nested VM
+	   
+           Installing KVM QEMU and Ubuntu OS as a Nested VM 
+	   
            Build the linux kernel
+	   
            Modified code in cpuid.c
+	   
            Testing the setup by a test program
+	   
             
 => Limeka  - SJSU_ID: 015905812
+
            Researched about exits reasons NOT enabled/handled in KVM
+	   
            Researched and implemented atomic variables
+	   
            Build the linux kernel
+	   
            Modified code in vmx.c
+	   
            Worked on fixing runtime issues
+	   
 		
 Question_2: Describe in detail the steps you used to complete the assignment. 
 =>
@@ -110,18 +122,30 @@ Question_1: For each member in your team, provide 1 paragraph detailing what par
 implemented / researched.	
 
 => Simran  - SJSU_ID: 015950610
+
            Researched about exits reasons NOT enabled/handled in SDM
+	   
            Checking growth rate of exit types
+	   
            Build the linux kernel
+	   
            Modified code in cpuid.c
+	   
            Testing code changes
+	   
             
 => Limeka  - SJSU_ID: 015905812
+
            Researched about exits reasons NOT enabled/handled in KVM
+	   
            Checking total exits after nested VM reboot
+	   
            Build the linux kernel
+	   
            Modified code in vmx.c
+	   
            Handled error conditions and debugging issues
+	   
            
            
 Question_2: Describe in detail the steps you used to complete the assignment. 
