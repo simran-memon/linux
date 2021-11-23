@@ -185,8 +185,8 @@ Question_3: Comment on the frequency of exits – does the number of exits incre
 more exits performed during certain VM operations? Approximately how many exits does a full VM 
 boot entail?
 
-=> The growth rate of the number of exits does not seem to be stable. For example, exit codes from 56 - 69, all exited 0 times. Whereas, with some of the VM instructions like wget, unauthorized file access or other VM operations being executed inside the guest VM more number of exits occur. This could be due to exceptions, page fault, etc. For exit reason 1 (external interrupt) the count increased rapidly from 44179 to 201893 when a " wget http://www.example.com/filename " command was executed on the nested VM.
-=> For our current setup, after a reboot on nested VM, approximately 2425982 exits occur within 64520426304 cpu cycles.
+=> The growth rate of the number of exits does not seem to be stable. For example, exit codes from 56 - 69, all exited 0 times. Whereas, with some of the VM instructions like wget, unauthorized file access or other VM operations being executed inside the guest VM more number of exits occur. This could be due to exceptions, page fault, etc. For exit reason 1 (external interrupt) the count increased rapidly from 3946878 to 4248001 when a "wget http://www.google.com/" command was executed on the nested VM.
+=> For our current setup, before the reboot the count was: 0x0019e6d8   => 1697496 (Decimal) and after a reboot on nested VM the count increased to: 0x002bf82f    => 2881583 (Decimal), approximately 1184087 exits occur.
 
 
 Question_4: Of the exit types defined in the SDM, which are the most frequent? Least?
